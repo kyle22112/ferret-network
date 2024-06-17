@@ -1,6 +1,6 @@
 self.__uv$config = {
     prefix: '/static/jmwsw/',
-    bare:'https://1234nockingondador.vercel.app',
+    bare:'https://math-english-sci.vercel.app',
     encodeUrl: Ultraviolet.codec.xor.encode,
     decodeUrl: Ultraviolet.codec.xor.decode,
     handler: '/static/uv/uv.handler.js',
