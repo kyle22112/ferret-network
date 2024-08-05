@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <script src="https://kit.fontawesome.com/e3cb4c7a69.js" crossorigin="anonymous"></script>
+        <title>Ferret Network | Settings</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="ferret-network-logo.png">
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <li class="nav-logo">
+                    <img src="ferret-network-logo.png" width="40" height="40" onclick="window.location.href = 'index.html'">
+                </li>
+                <li>
+                    <a href="index.html">Home</a>
+                    <i class="fa-solid fa-house" class="white-icon"></i>
+                </li>
+                <li>
+                    <a href="games.html">Games</a>
+                    <i class="fa-solid fa-gamepad" class="white-icon"></i>
+                </li>
+                <li>
+                    <a href="apps.html">Apps</a>
+                    <i class="fa-solid fa-computer" class="white-icon"></i>
+                </li>
+                <li>
+                    <a href="about.html">About</a>
+                    <i class="fa-solid fa-person" class="white-icon"></i>
+                </li>
+                <li>
+                    <a href="settings.html">Settings</a>
+                    <i class="fa-solid fa-gear" class="white-icon"></i>
+                </li>
+            </ul>
+        </nav>
+        <div class="center-horizontal">
+            <h1 class="poppins-font">Settings</h1>
+            <h3 class="poppins-font">
+                About:Blank Cloaker
+            </h3>
+            <p class="poppins-font">
+                Replaces the url with "about:blank".
+            </p>
+            <script>
+                function blank(){
+                    (function () {var url = document.URL; var urlObj = new window.URL(window.location.href); win = window.open(); win.document.body.style.margin = "0"; win.document.body.style.height = "100vh"; var iframe = win.document.createElement("iframe"); iframe.style.border = "none"; iframe.style.width = "100%"; iframe.style.height = "100%"; iframe.style.margin = "0"; iframe.referrerpolicy = "no-referrer"; iframe.allow = "fullscreen"; iframe.src = url.toString(); win.document.body.appendChild(iframe); var script = win.document.createElement("script"); script.src = ""; win.document.body.appendChild(script); })();
+                }
+            </script>
+            <button onclick="blank();">Open in about:blank</button>
+            <h3 class="poppins-font">Tab Cloakers</h3>
+            <p class="poppind-font">Replaces tab names.</p>
+            <div class="changetitles">
+                <button onclick="changeTitlesAndIcon('Google Docs', 'docslogo.png')">Google Docs</button> 
+                <button onclick="changeTitlesAndIcon('Google Drive', 'drivelogo.png')" class="bottommargin">Google Drive</button>
+                <button onclick="changeTitlesAndIcon('Desmos | Graphing Calculator', 'desmoslogo.png')">Desmos</button>
+            </div>
+            <div class="reset">
+                <button onclick="resetTitlesAndIcon()">Reset</button>
+            </div>
+        </div>
+        <script src="main.js"></script>
+    </body>
+</html>
