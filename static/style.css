@@ -107,10 +107,20 @@ button:disabled {
     margin-top: 20px;
 }
 
+.app-icons img {
+    width: 75px;
+    height: 75px;
+    max-width: 75px;
+    max-height: 75px;
+    object-fit: contain;
+    margin: 0;
+    padding: 0;
+}
+
 .app-icons {
     display: flex;
     justify-content: center;
-    gap: 20px; /* Adds some spacing between the icons */
+    gap: 20px;
 }
 
 .form__input {
@@ -124,4 +134,3 @@ button:disabled {
     text-align: center;
     color: #fff;
 }
-
