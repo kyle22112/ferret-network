@@ -3,7 +3,7 @@
 <head>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -13,23 +13,24 @@
     <link rel="icon" href="ferret-network-logo.png">
     <style>
         .app-icons img {
-            max-width: 100%;
-            max-height: 100%;
-            width: 75px !important;
-            height: 75px !important;
+            width: 75px; /* Ensure the icons are 75x75 pixels */
+            height: 75px;
             cursor: pointer;
-            object-fit: contain;
-            margin: 0;
-            padding: 0;
-            transform: none;
+            object-fit: contain; /* Ensure the image is contained within the box */
         }
 
         .app-icons {
             display: flex;
             justify-content: center;
-            gap: 20px;
+            gap: 20px; /* Adds spacing between the icons */
         }
 
+        .center-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
@@ -40,23 +41,23 @@
             </li>
             <li>
                 <a href="index.html">Home</a>
-                <i class="fa-solid fa-house" class="white-icon"></i>
+                <i class="fa-solid fa-house white-icon"></i>
             </li>
             <li>
                 <a href="games.html">Games</a>
-                <i class="fa-solid fa-gamepad" class="white-icon"></i>
+                <i class="fa-solid fa-gamepad white-icon"></i>
             </li>
             <li>
                 <a href="apps.html">Apps</a>
-                <i class="fa-solid fa-computer" class="white-icon"></i>
+                <i class="fa-solid fa-computer white-icon"></i>
             </li>
             <li>
                 <a href="about.html">About</a>
-                <i class="fa-solid fa-person" class="white-icon"></i>
+                <i class="fa-solid fa-person white-icon"></i>
             </li>
             <li>
                 <a href="settings.html">Settings</a>
-                <i class="fa-solid fa-gear" class="white-icon"></i>
+                <i class="fa-solid fa-gear white-icon"></i>
             </li>
         </ul>
     </nav>
@@ -76,7 +77,6 @@
         <img src="nvidia.jpg" alt="GeForce Now" onclick="location.href=__uv$config.prefix + __uv$config.encodeUrl('https://play.geforcenow.com')" data-name="geforce now">
     </div>
 
-    
     <script>
         // Grab the search bar and app icons container
         const searchBar = document.getElementById('search-bar');
