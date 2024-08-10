@@ -12,18 +12,31 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="ferret-network-logo.png">
     <style>
-        /* Simple styles for the search results */
-        #search-results {
+        /* Style for the app icons */
+        .app-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
             margin-top: 20px;
-            font-family: 'Poppins', sans-serif;
         }
-        #search-results li {
-            list-style: none;
-            padding: 5px;
+
+        .app-icons img {
+            width: 75px;
+            height: 75px;
             cursor: pointer;
         }
-        #search-results li:hover {
-            background-color: #f0f0f0;
+
+        /* Style for the search bar */
+        .search-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .search-container input {
+            width: 50%;
+            padding: 10px;
+            font-size: 16px;
         }
     </style>
 </head>
@@ -53,61 +66,48 @@
                 <a href="settings.html">Settings</a>
                 <i class="fa-solid fa-gear" class="white-icon"></i>
             </li>
-            <li>
-                <input type="text" id="search-bar" placeholder="Search...">
-            </li>
         </ul>
     </nav>
     <div class="center-horizontal">
         <h1 class="poppins-font">Apps</h1>        
     </div>
-    <div class="center-horizontal">
-        <h1>
-            <img src="tiktoklogo.png"  width=75 height=75 onclick="location.href=__uv$config.prefix + __uv$config.encodeUrl('https://tiktok.com')">
-            <img src="Character_AI_Logo.png" width=75 height=75 onclick="location.href=__uv$config.prefix + __uv$config.encodeUrl('https://character.ai')">
-            <img src="nvidia.jpg"  width=75 height=75 onclick="location.href=__uv$config.prefix + __uv$config.encodeUrl('https://play.geforcenow.com')">
-        </h1>
+
+    <!-- Search Bar -->
+    <div class="search-container">
+        <input type="text" id="search-bar" placeholder="Search for an app...">
     </div>
 
-    <!-- List of items to search from -->
-    <ul id="search-results"></ul>
+    <!-- App Icons -->
+    <div class="app-icons" id="app-icons">
+        <img src="tiktoklogo.png" alt="TikTok" onclick="location.href=__uv$config.prefix + __uv$config.encodeUrl('https://tiktok.com')" data-name="tiktok">
+        <img src="Character_AI_Logo.png" alt="Character AI" onclick="location.href=__uv$config.prefix + __uv$config.encodeUrl('https://character.ai')" data-name="character ai">
+        <img src="nvidia.jpg" alt="GeForce Now" onclick="location.href=__uv$config.prefix + __uv$config.encodeUrl('https://play.geforcenow.com')" data-name="geforce now">
+    </div>
 
     <script>
-        // Sample data (could be dynamically loaded or pulled from an API)
-        const apps = [
-            { name: 'TikTok', url: 'https://tiktok.com' },
-            { name: 'Character AI', url: 'https://character.ai' },
-            { name: 'GeForce Now', url: 'https://play.geforcenow.com' },
-            { name: 'YouTube', url: 'https://youtube.com' },
-            { name: 'Google', url: 'https://google.com' },
-            { name: 'Twitter', url: 'https://twitter.com' },
-            // Add more items as needed
-        ];
-
-        // Grab the search bar and search results elements
+        // Grab the search bar and app icons container
         const searchBar = document.getElementById('search-bar');
-        const searchResults = document.getElementById('search-results');
+        const appIcons = document.getElementById('app-icons');
+        const apps = appIcons.getElementsByTagName('img');
 
         // Add event listener to the search bar
         searchBar.addEventListener('input', function() {
-            // Clear previous results
-            searchResults.innerHTML = '';
-
-            // Get the search query
             const query = searchBar.value.toLowerCase();
 
-            // Filter apps based on the search query
-            const filteredApps = apps.filter(app => app.name.toLowerCase().includes(query));
+            // Loop through all app icons
+            for (let i = 0; i < apps.length; i++) {
+                const appName = apps[i].getAttribute('data-name').toLowerCase();
 
-            // Display the filtered results
-            filteredApps.forEach(app => {
-                const li = document.createElement('li');
-                li.textContent = app.name;
-                li.onclick = () => window.location.href = __uv$config.prefix + __uv$config.encodeUrl(app.url);
-                searchResults.appendChild(li);
-            });
+                // Show or hide app based on search query
+                if (appName.startsWith(query)) {
+                    apps[i].style.display = '';
+                } else {
+                    apps[i].style.display = 'none';
+                }
+            }
         });
     </script>
+
     <script src="main.js"></script>
     <script src="/static/uv/uv.bundle.js" defer></script>
     <script src="/static/uv/uv.config.js" defer></script>
