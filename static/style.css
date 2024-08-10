@@ -100,15 +100,28 @@ button:disabled {
     margin-left: 10px;
 }
 
-.form__input {
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  font-size: 16px;
-  width: 300px;
-  box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
-  background-color: #222;
-  text-align: center;
-  color: #fff;
-  cursor: pointer;
+.center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
 }
+
+.app-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Adds some spacing between the icons */
+}
+
+.form__input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 300px;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+    background-color: #222;
+    text-align: center;
+    color: #fff;
+}
+
