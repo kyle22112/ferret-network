@@ -110,5 +110,5 @@ button:disabled {
   background-color: #222;
   text-align: center;
   color: #fff;
-  cursor:cell;
+  cursor: pointer;
 }
