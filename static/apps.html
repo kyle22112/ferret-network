@@ -13,11 +13,18 @@
     <link rel="icon" href="ferret-network-logo.png">
     <style>
         .app-icons img {
-            width: 75px;
-            height: 75px;
+            width: 75px !important;
+            height: 75px !important;
             cursor: pointer;
-            object-fit: contain; /* Ensures the images retain their aspect ratio */
+            object-fit: contain;
         }
+
+        .app-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
     </style>
 </head>
 <body>
