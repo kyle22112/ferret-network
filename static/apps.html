@@ -16,14 +16,23 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-    }
+        }
 
-    .appimgs {
-        margin: 10px;
-    }
+        .app-container {
+            margin: 10px;
+            text-align: center;
+        }
 
+        .appimgs {
+            display: block;
+            margin: 0 auto 5px;
+        }
+
+        .app-name {
+            font-family: 'Poppins', sans-serif;
+            font-size: 14px;
+        }
     </style>
-
 </head>
 <body>
     <nav>
@@ -64,35 +73,83 @@
 
     <!-- App Icons -->
     <div class="center-container" id="app-icons">
-        <img src="tiktoklogo.jpg" alt="TikTok" onclick="location.href=__uv$config.prefix + __uv$config.encodeUrl('https://tiktok.com')" data-name="tiktok" width=75 height=75 class="appimgs">
-        <img src="Character_AI_Logo.png" alt="Character AI" onclick="location.href=__uv$config.prefix + __uv$config.encodeUrl('https://character.ai')" data-name="character ai" width=75 height=75 class="appimgs">
-        <img src="nvidia.jpg" alt="GeForce Now" onclick="location.href=__uv$config.prefix + __uv$config.encodeUrl('https://play.geforcenow.com')" data-name="geforce now" width=75 height=75 class="appimgs">
-        <img src="youtubelogo.png" alt="Youtube" onclick="location.href=__uv$config.prefix + __uv$config.encodeUrl('https://youtube.com')" data-name="youtube" width=75 height=75 class="appimgs">
-        <img src="instagramlogo.png" alt="Instagram" onclick="location.href=__uv$config.prefix + __uv$config.encodeUrl('https://instagram.com')" data-name="instagram" width=75 height=75 class="appimgs">
-        <img src="netflixlogo.jpg" alt="Instagram" onclick="location.href=__uv$config.prefix + __uv$config.encodeUrl('https://netflix.com')" data-name="netflix" width=75 height=75 class="appimgs">
-        <img src="xlogo.png" alt="x" onclick="location.href=__uv$config.prefix + __uv$config.encodeUrl('https://x.com')" data-name="x" width=75 height=75 class="appimgs">
-        <img src="facebooklogo.png" alt="facebook" onclick="location.href=__uv$config.prefix + __uv$config.encodeUrl('https://facebook.com')" data-name="facebook" width=75 height=75 class="appimgs">
-        <img src="cloudgaminglogo.jpg" alt="xbox cloud gaming" onclick="location.href=__uv$config.prefix + __uv$config.encodeUrl('https://www.xbox.com/en-us/play')" data-name="xbox cloud gaming" width=75 height=75 class="appimgs">
-        <img src="chatgptlogo.png" alt="chatgpt" onclick="location.href=__uv$config.prefix + __uv$config.encodeUrl('https://chatgpt.com')" data-name="chatgpt" width=75 height=75 class="appimgs">
-        <img src="redditlogo.png" alt="reddit" onclick="location.href=__uv$config.prefix + __uv$config.encodeUrl('https://reddit.com')" data-name="reddit" width=75 height=75 class="appimgs">
-        <img src="discordlogo.jpg" alt="discord" onclick="location.href=__uv$config.prefix + __uv$config.encodeUrl('https://discord.com')" data-name="discord" width=75 height=75 class="appimgs">
-        <img src="spotifylogo.png" alt="spotify" onclick="location.href=__uv$config.prefix + __uv$config.encodeUrl('https://spotify.com')" data-name="spotify" width=75 height=75 class="appimgs">
-        <img src="newgroundslogo.webp" alt="newgrounds" onclick="location.href=__uv$config.prefix + __uv$config.encodeUrl('https://newgrounds.com')" data-name="newgrounds" width=75 height=75 class="appimgs">
-        <img src="pinterestlogo.png" alt="pinterest" onclick="location.href=__uv$config.prefix + __uv$config.encodeUrl('https://pinterest.com')" data-name="pinterest" width=75 height=75 class="appimgs">
-        <img src="vmlogo.jpg" alt="windows virtual machine" onclick="location.href=__uv$config.prefix + __uv$config.encodeUrl('https://www.onworks.net/playonline/index.php')" data-name="windows virtual machine" width=75 height=75 class="appimgs">
+        <div class="app-container" data-name="tiktok">
+            <img src="tiktoklogo.jpg" alt="TikTok" onclick="location.href=__uv$config.prefix + __uv$config.encodeUrl('https://tiktok.com')" width=75 height=75 class="appimgs">
+            <span class="app-name">TikTok</span>
+        </div>
+        <div class="app-container" data-name="character ai">
+            <img src="Character_AI_Logo.png" alt="Character AI" onclick="location.href=__uv$config.prefix + __uv$config.encodeUrl('https://character.ai')" width=75 height=75 class="appimgs">
+            <span class="app-name">Character AI</span>
+        </div>
+        <div class="app-container" data-name="geforce now">
+            <img src="nvidia.jpg" alt="GeForce Now" onclick="location.href=__uv$config.prefix + __uv$config.encodeUrl('https://play.geforcenow.com')" width=75 height=75 class="appimgs">
+            <span class="app-name">GeForce Now</span>
+        </div>
+        <div class="app-container" data-name="youtube">
+            <img src="youtubelogo.png" alt="Youtube" onclick="location.href=__uv$config.prefix + __uv$config.encodeUrl('https://youtube.com')" width=75 height=75 class="appimgs">
+            <span class="app-name">YouTube</span>
+        </div>
+        <div class="app-container" data-name="instagram">
+            <img src="instagramlogo.png" alt="Instagram" onclick="location.href=__uv$config.prefix + __uv$config.encodeUrl('https://instagram.com')" width=75 height=75 class="appimgs">
+            <span class="app-name">Instagram</span>
+        </div>
+        <div class="app-container" data-name="netflix">
+            <img src="netflixlogo.jpg" alt="Netflix" onclick="location.href=__uv$config.prefix + __uv$config.encodeUrl('https://netflix.com')" width=75 height=75 class="appimgs">
+            <span class="app-name">Netflix</span>
+        </div>
+        <div class="app-container" data-name="x">
+            <img src="xlogo.png" alt="x" onclick="location.href=__uv$config.prefix + __uv$config.encodeUrl('https://x.com')" width=75 height=75 class="appimgs">
+            <span class="app-name">X</span>
+        </div>
+        <div class="app-container" data-name="facebook">
+            <img src="facebooklogo.png" alt="Facebook" onclick="location.href=__uv$config.prefix + __uv$config.encodeUrl('https://facebook.com')" width=75 height=75 class="appimgs">
+            <span class="app-name">Facebook</span>
+        </div>
+        <div class="app-container" data-name="xbox cloud gaming">
+            <img src="cloudgaminglogo.jpg" alt="Xbox Cloud Gaming" onclick="location.href=__uv$config.prefix + __uv$config.encodeUrl('https://www.xbox.com/en-us/play')" width=75 height=75 class="appimgs">
+            <span class="app-name">Xbox Cloud Gaming</span>
+        </div>
+        <div class="app-container" data-name="chatgpt">
+            <img src="chatgptlogo.png" alt="ChatGPT" onclick="location.href=__uv$config.prefix + __uv$config.encodeUrl('https://chatgpt.com')" width=75 height=75 class="appimgs">
+            <span class="app-name">ChatGPT</span>
+        </div>
+        <div class="app-container" data-name="reddit">
+            <img src="redditlogo.png" alt="Reddit" onclick="location.href=__uv$config.prefix + __uv$config.encodeUrl('https://reddit.com')" width=75 height=75 class="appimgs">
+            <span class="app-name">Reddit</span>
+        </div>
+        <div class="app-container" data-name="discord">
+            <img src="discordlogo.jpg" alt="Discord" onclick="location.href=__uv$config.prefix + __uv$config.encodeUrl('https://discord.com')" width=75 height=75 class="appimgs">
+            <span class="app-name">Discord</span>
+        </div>
+        <div class="app-container" data-name="spotify">
+            <img src="spotifylogo.png" alt="Spotify" onclick="location.href=__uv$config.prefix + __uv$config.encodeUrl('https://spotify.com')" width=75 height=75 class="appimgs">
+            <span class="app-name">Spotify</span>
+        </div>
+        <div class="app-container" data-name="newgrounds">
+            <img src="newgroundslogo.webp" alt="Newgrounds" onclick="location.href=__uv$config.prefix + __uv$config.encodeUrl('https://newgrounds.com')" width=75 height=75 class="appimgs">
+            <span class="app-name">Newgrounds</span>
+        </div>
+        <div class="app-container" data-name="pinterest">
+            <img src="pinterestlogo.png" alt="Pinterest" onclick="location.href=__uv$config.prefix + __uv$config.encodeUrl('https://pinterest.com')" width=75 height=75 class="appimgs">
+            <span class="app-name">Pinterest</span>
+        </div>
+        <div class="app-container" data-name="windows virtual machine">
+            <img src="vmlogo.jpg" alt="Windows Virtual Machine" onclick="location.href=__uv$config.prefix + __uv$config.encodeUrl('https://www.onworks.net/playonline/index.php')" width=75 height=75 class="appimgs">
+            <span class="app-name">Windows VM</span>
+        </div>
     </div>
 
     <script>
         // Grab the search bar and app icons container
         const searchBar = document.getElementById('search-bar');
         const appIcons = document.getElementById('app-icons');
-        const apps = appIcons.getElementsByTagName('img');
+        const apps = appIcons.getElementsByClassName('app-container');
 
         // Add event listener to the search bar
         searchBar.addEventListener('input', function() {
             const query = searchBar.value.toLowerCase();
 
-            // Loop through all app icons
+            // Loop through all app containers
             for (let i = 0; i < apps.length; i++) {
                 const appName = apps[i].getAttribute('data-name').toLowerCase();
 
