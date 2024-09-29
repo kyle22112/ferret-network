@@ -1,6 +1,6 @@
 self.__uv$config = {
     prefix: '/static/fn/',
-    bare:'https://mathematics-english.vercel.app',
+    bare: 'https://v4-virid-three.vercel.app/',
     encodeUrl: Ultraviolet.codec.xor.encode,
     decodeUrl: Ultraviolet.codec.xor.decode,
     handler: '/static/uv/uv.handler.js',
